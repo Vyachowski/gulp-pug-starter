@@ -1,11 +1,11 @@
 .DS_Store
 .DS_Store?
 ._*
+*.code-workspace
 .Spotlight-V100
 .Trashes
 .idea
 .vscode
-.github
 .env
 .yarn/cache
 .yarn/install-state.gz

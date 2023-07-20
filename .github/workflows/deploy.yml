@@ -1,0 +1,42 @@
+name: Deploy
+# on – определяет события, которые запускают воркфлоу, для деплоя внизу необходимо раскомментить код деплоя
+on:
+  push:
+    branches:
+      - main
+jobs:
+  # build – произвольно выбранное имя задания
+  # их может быть больше одного
+  Build-and-Deploy:
+    # операционная система для работы воркфлоу
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js 20.2.0
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.2.0'
+          cache: 'npm'
+      - name: Install Yarn
+        run: npm i -g yarn
+      - name: Install Gulp
+        run: npm i -g gulp
+      - name: Install BEM
+        run: npm i -g bem-tools-core
+      - name: Set Yarn version
+        run: yarn set version berry
+      - name: Install yarn dependencies
+        run: yarn
+      - name: Run build task
+        run: yarn run build
+      # - name: Deploy to Server
+      #   uses: easingthemes/ssh-deploy@main
+      #   env: 
+      #       SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      #       ARGS: "-rlgoDzvc -i --delete"
+      #       SOURCE: "dist/"
+      #       REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+      #       REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
+      #       REMOTE_USER: ${{ secrets.REMOTE_USER }}
+      #       TARGET: ${{ secrets.REMOTE_TARGET_HAIKIN }}
+      #       EXCLUDE: "/node_modules/"

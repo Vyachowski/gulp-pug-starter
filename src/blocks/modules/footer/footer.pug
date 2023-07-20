@@ -1,0 +1,17 @@
+footer.footer
+  .footer__wrapper
+    nav.footer__navbar
+      ul.footer__nav-list.list.list--horizontal
+        li.footer__nav-item
+          a.footer__nav-link(href="about.html" class=(currentPageMarker === 'About' ? 'footer__nav-link--active' : '')) About
+        li.footer__nav-item
+          a.footer__nav-link(href="services.html" class=(currentPageMarker === 'Services' ? 'footer__nav-link--active' : '')) Services
+        li.footer__nav-item
+          a.footer__nav-link(href="projects.html" class=(currentPageMarker === 'Projects' ? 'footer__nav-link--active' : '')) Projects
+        li.footer__nav-item
+          a.footer__nav-link(href="contacts.html" class=(currentPageMarker === 'Contacts' ? 'footer__nav-link--active' : '')) Contacts
+        li.footer__nav-item
+          a.footer__nav-link(href="today-i-learned.html" class=(currentPageMarker === 'TIL' ? 'footer__nav-link--active' : '')) TIL
+        li.footer__nav-item
+          a.footer__nav-link(href="blog.html" class=(currentPageMarker === 'Blog' ? 'footer__nav-link--active' : '')) Blog
+    p.footer__author Built by Slava Haikin

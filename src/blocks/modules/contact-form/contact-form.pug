@@ -1,0 +1,16 @@
+section.contact-form 
+  .contact-form__wrapper.container
+    .contact-form__text-wrapper
+      p.subtitle Contacts
+      h2.title Keep in touch
+      p.contact-form__text
+        | I am totally open to a new job and new contacts so let’s discuss it in any 
+        | convenient way. 
+    form.contact-form__form(action='#' method='get' autocomplete='on') 
+      p.contact-form__group
+        label.contact-form__label(for="contact-form__message") Message:
+        textarea.contact-form__field.contact-form__textarea#contact-form__message(name="contact-form__message", cols="15", rows="5") Hi, Slava...
+      p.contact-form__group
+        label.contact-form__label(for="contact-form__email") Your email:
+        input.contact-form__field#contact-form__email(type="email", name="contact-form__email" placeholder='your@mail.com')
+      button.button.button--accent(type="submit") Build a bridge

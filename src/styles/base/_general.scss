@@ -1,4 +1,40 @@
+// BASIC STYLES
+:root,
+:root[data-theme='light'] {
+  color: $text-primary-color;
+  font-family: $basic-font;
+  font-size: $text-size;
+  line-height: $line-height;
+  background-color: $background-color;
+  height: 100%;
+}
+
+// :root[data-theme="dark"] {
+//   color: $text-primary-color;
+//   font-size: $text-size;
+//   font-family: $basic-font;
+//   background-color: $background-color;
+// }
+
 h1, h2, h3, h4, h5, h6, ul {
     margin: 0;
     padding: 0;
+}
+
+body {
+    position: relative;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-width: 300px;
+    height: 100vh;
+    min-height: 365px;
+    margin: 0 auto;
+    font-family: $basic-font;
+    letter-spacing: -0.32px;
+  }
+
+.menu-opened {
+  @media (max-width: ($lg - 1)) {
+    overflow: hidden;
+  }
 }

@@ -2,12 +2,16 @@ extends layouts/default
 include helpers/mixins
 
 block variables
-	- const title = "gulp-pug-starter"
+	- const title = "Front-end Developer Slava Haikin";
+	- const description = "A personal website about a front-end developer, who loves to create fast websites and webapps and learn something new everyday";
+	- const currentPageMarker = 'About';
 
 block content
 	include ../blocks/modules/header/header
+	include ../blocks/modules/content/content
+		include ../blocks/modules/hero/hero
+		include ../blocks/modules/key-projects/key-projects
+		include ../blocks/modules/contact-form/contact-form
 	include ../blocks/modules/footer/footer
-
 block scripts
-	script(src="js/vendor.js")
-	script(src="js/main.js")
+	script(src="js/main.js" async)

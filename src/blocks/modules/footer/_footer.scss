@@ -1,0 +1,138 @@
+.footer {
+  min-height: 80px;
+
+  &__wrapper {
+    width: 100%;
+    padding-inline: 0;
+
+    @media (min-width: $lg) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding-inline: 30px;
+    }
+  }
+
+  &__navbar {
+    border-bottom: 1px solid $border-color;
+
+    @media (min-width: $lg) {
+      border: none;
+    }
+  }
+
+  &__nav {
+    padding-block: 30px;
+    border-block: 1px solid $border-color;
+
+    @media (min-width: $lg) {
+      display: flex;
+      flex-direction: row;
+      padding-block: 0;
+      border-block: none;
+    }
+  }
+
+  &__nav-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @media (min-width: $lg) {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+  }
+
+  &__nav-link {
+    display: block;
+    padding: 25px 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: clamp(16px, $text-size, 20px);
+    line-height: 1.15;
+    text-decoration: none;
+    color: #667080;
+
+    &--active {
+      color: $text-primary-color;
+    }
+
+    &:hover {
+      background-color: rgba(#d9d9d9, 0.1);
+    }
+
+    &:active {
+      background-color: rgba(#d9d9d9, 0.1);
+    }
+
+    @media (min-width: $lg) {
+      min-height: 79px;
+      padding: 30px 30px;
+      text-align: left;
+    }
+  }
+
+  &__nav-item:nth-child(1) {
+    order: 1;
+
+    @media (min-width: $lg) {
+      order: initial;
+    }
+  }
+
+  &__nav-item:nth-child(2) {
+    order: 3;
+
+    @media (min-width: $lg) {
+      order: initial;
+    }
+  }
+
+  &__nav-item:nth-child(3) {
+    order: 5;
+
+    @media (min-width: $lg) {
+      order: initial;
+    }
+  }
+
+  &__nav-item:nth-child(4) {
+    order: 2;
+
+    @media (min-width: $lg) {
+      order: initial;
+    }
+  }
+
+  &__nav-item:nth-child(5) {
+    order: 4;
+
+    @media (min-width: $lg) {
+      order: initial;
+    }
+  }
+
+  &__nav-item:nth-child(6) {
+    order: 6;
+
+    @media (min-width: $lg) {
+      order: initial;
+    }
+  }
+
+  &__author {
+    margin: 0;
+    padding-block: 25px;
+    text-align: center;
+    color: #667080;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.32px;
+
+    @media (min-width: $lg) {
+      order: -1;
+    }
+  }
+}

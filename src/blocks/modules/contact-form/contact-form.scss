@@ -1,0 +1,108 @@
+.contact-form {
+  position: relative;
+  z-index: 2;
+  padding-block: 60px;
+  border-bottom: 1px solid $border-color;
+
+  @media (min-width: $xl) {
+
+    &::before {
+      position: absolute;
+      left: -10%;
+      top: -15px;
+      z-index: -1;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      color: #a7a7a7;
+      font-size: 700px;
+      line-height: 1;
+      letter-spacing: -140.671px;
+      opacity: 0.05;
+      content: "</>";
+      overflow: hidden;
+    }
+
+    &::after {
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+      height: 100%;
+      width: 40%;
+      opacity: 0.5;
+      background-image: url("../img/hero-background.svg");
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: cover;
+      content: "";
+    }
+    
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+
+    @media (min-width: $lg) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+    }
+  }
+
+  &__text-wrapper {
+    @media (min-width: $lg) {
+      max-width: 40%;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media (min-width: $lg) {
+      width: 40%;
+    }
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__label {
+    display: block;
+    color: #667080;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.28px;
+    text-align: left;
+  }
+
+  &__field {
+    width: 100%;
+    border: 1px solid #667080;
+    background: $background-color;
+    padding: 11px 20px;
+    color: #000;
+    font: inherit;
+    font-size: 15px;
+    letter-spacing: -0.3px;
+    border-radius: 6px;
+  }
+  
+  &__textarea {
+    padding: 15px 20px;
+    font-size: 15px;
+    letter-spacing: -0.3px;
+    border-radius: 6px;
+  }
+}

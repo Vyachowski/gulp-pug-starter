@@ -1,0 +1,116 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 95vw;
+  margin: 0 auto;
+
+  @media (min-width: $xl) {
+    width: 90vw;
+    max-width: $max-page-width;
+    padding-inline: 50px;
+  }
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  min-width: 130px;
+  padding: 13px 24px;
+  text-decoration: none;
+  font-family: $secondary-font;
+  font-weight: 700;
+  color: inherit;
+  letter-spacing: -0.32px;
+  border: 1px solid #b9bbc2;
+  border-radius: 0.3rem;
+  transition-duration: 0.6s;
+
+  &--accent {
+    border: none;
+    color: #ffffff;
+    background-color: $accent-color;
+    box-shadow: 4px 4px 10px 0px rgba(5, 93, 235, 0.3);
+
+    &:hover {
+      box-shadow: 4px 4px 10px 0px rgba(5, 93, 235, 0.8);
+      translate: -1px -1px;
+    }
+
+    &:active {
+      background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.2) 0%,
+          rgba(0, 0, 0, 0.2) 100%
+        ),
+        $accent-color;
+    }
+  }
+
+  &--secondary {
+    color: $text-primary-color;
+    background-color: transparent;
+    box-shadow: none;
+
+    &:hover {
+      border-radius: 6px;
+      box-shadow: 4px 4px 10px 0px rgba(#b9bbc2, 0.3);
+      translate: 0 0;
+    }
+
+    &:active {
+      background: transparent;
+      box-shadow: none;
+    }
+  }
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  &--horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 2rem;
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: normal;
+
+  &--second {
+    font-size: 2.5rem;
+  }
+
+  &--third {
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: -0.6px;
+    color: $accent-color;
+  }
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: normal;
+  color: #667080;
+}

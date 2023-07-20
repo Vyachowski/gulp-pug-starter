@@ -1,4 +1,6 @@
-# gulp-pug-starter
+# Modified gulp-pug-starter
+
+Доработанная версия под мои настройки линтера и с небольшими изменениями.
 
 ![License](https://img.shields.io/github/license/andreyalexeich/gulp-pug-starter)
 ![GitHub stars](https://img.shields.io/github/stars/andreyalexeich/gulp-pug-starter.svg?style=social)

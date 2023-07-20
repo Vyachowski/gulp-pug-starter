@@ -14,6 +14,8 @@ import plumber from "gulp-plumber";
 import browsersync from "browser-sync";
 import debug from "gulp-debug";
 import yargs from "yargs";
+import postcss from "gulp-postcss";
+import postcssPresetEnv from "postcss-preset-env";
 
 const sass = gulpsass(dartsass);
 const argv = yargs.argv,
@@ -24,6 +26,7 @@ gulp.task("styles", () => {
         .pipe(gulpif(!production, sourcemaps.init()))
         .pipe(plumber())
         .pipe(sass())
+        .pipe(gulpif(production, postcss([postcssPresetEnv()])))
         .pipe(groupmedia())
         .pipe(gulpif(production, autoprefixer({
             cascade: false,

@@ -1,0 +1,144 @@
+.hero {
+  padding-block: 60px;
+  border-bottom: 1px solid $border-color;
+
+  @media (min-width: $lg) {
+    padding-block: 80px;
+  }
+  @media (min-width: $xl) {
+    height: calc(100vh - 80px);
+    min-height: 700px;
+    padding-block: 20px;
+    background-image: url('../img/hero-background.svg');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &__wrapper {
+    max-width: $xxxl;
+
+    @media (min-width: $xl) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+      height: 100%;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (min-width: $xl) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-block: auto;
+      gap: 95px;
+    }
+  }
+
+  &__image {
+    margin: 0 auto;
+    margin-bottom: 40px;
+
+    @media (min-width: $xl) {
+      order: 2;
+      width: 300px;
+      height: 317px;
+      margin: 0;
+    }
+  }
+
+  &__text-content {
+    margin-bottom: 60px;
+    text-align: center;
+
+    @media (min-width: $lg) {
+      margin-bottom: 124px;
+    }
+
+    @media (min-width: $xl) {
+      order: 1;
+      max-width: 60%;
+      margin-bottom: 0;
+      text-align: left;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+    color: #667080;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+
+    @media (min-width: $xl) {
+      font-size: 60px;
+    }
+  }
+
+  &__title span {
+    color: $accent-color;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+
+    @media (min-width: $lg) {
+      max-width: 60vw;
+      margin-inline: auto;
+    }
+
+    @media (min-width: $xl) {
+      max-width: 60vw;
+      margin-right: auto;
+    }
+  }
+
+  &__button-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+
+    @media (min-width: $xl) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__techstack {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    max-width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    color: #667080;
+
+    @media (min-width: $lg) {
+      justify-content: flex-start;
+      flex-direction: row;
+      margin-left: 0;
+      text-align: left;
+    }
+  }
+
+  &__techstack-list {
+    color: #b9bbc2;
+    gap: 20px;
+  }
+
+  &__techstack-item {
+    transition-duration: 0.5s;
+    &:hover {
+      color: #667080;
+      scale: 1.1;
+    }
+  }
+}
